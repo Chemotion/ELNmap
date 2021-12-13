@@ -40,6 +40,8 @@ cities.append(["Paderborn","Paderborn","productive",1])
 cities.append(["Stuttgart","Stuttgart, Stadtkreis","productive",2])
 cities.append(["Zürich","Zürich","mixed",3])
 
+# mixed: Karlsruhe, Zürich
+
 xyKarlsruhe = map_df[map_df.NAME_LATN == "Karlsruhe, Stadtkreis"]['coords'].values[0]
 xyAachen = map_df[map_df.NAME_LATN == "Städteregion Aachen"]['coords'].values[0]
 plt.plot([xyKarlsruhe[0], xyAachen[0]], [xyKarlsruhe[1], xyAachen[1]], color='red', linestyle=":", linewidth=2, zorder=2)
