@@ -57,15 +57,15 @@ for idx, row in map_df.iterrows():
         if row['NAME_LATN'] == city[1]:
             if city[2] == "productive" or city[2] == "mixed":
                 # city name with number of user = city[3]) + ' ' + city[0]
-                plt.annotate(text=str(city[3]), xy=row['coords'], horizontalalignment='center', verticalalignment='center', color='black', fontproperties=prop,  zorder=idx+3)
+                plt.annotate(text=str(city[3]), xy=row['coords'], horizontalalignment='center', verticalalignment='center', color='white', fontproperties=prop,  zorder=idx+3)
                 c_green = plt.Circle(row['coords'], 20000, color='g', zorder=idx+2)
                 ax.add_patch(c_green)                
             elif city[2] == "testing":
-                plt.annotate(text=city[3], xy=row['coords'], horizontalalignment='center', verticalalignment='center', color='b', fontproperties=prop,  alpha=1)
+                plt.annotate(text=city[3], xy=row['coords'], horizontalalignment='center', verticalalignment='center', color='black', fontproperties=prop,  alpha=1)
                 c_orange = plt.Circle(row['coords'], 20000, color='orange')
                 ax.add_patch(c_orange)                
             elif city[2] == "planned":
-                plt.annotate(text=city[3], xy=row['coords'], horizontalalignment='center', verticalalignment='center', color='b', fontproperties=prop)                
+                plt.annotate(text=city[3], xy=row['coords'], horizontalalignment='center', verticalalignment='center', color='white', fontproperties=prop)                
                 c_blue = plt.Circle(row['coords'], 20000, color='b')
                 ax.add_patch(c_blue)                
             # elif city[2] == "mixed":
