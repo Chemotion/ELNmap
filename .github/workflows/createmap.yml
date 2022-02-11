@@ -15,7 +15,16 @@ jobs:
           pip    install -r requirements.txt
           wget   https://github.com/googlefonts/opensans/raw/main/fonts/ttf/OpenSans-Bold.ttf
           python generateELNmap.py
+          mkdir  Documentation
+          cp     map.svg Documentation
       - uses: actions/upload-artifact@v2
         with:
           name: ELNmap
           path: map.svg
+      - uses: actions/checkout@v1
+      - name: Upload Documentation to Wiki
+        uses: SwiftDocOrg/github-wiki-publish-action@v1
+        with:
+          path: "Documentation"
+        env:
+          GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
