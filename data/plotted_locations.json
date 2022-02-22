@@ -10,7 +10,7 @@
         "common_name" : "Zürich",
         "nuts_lvl3"   : "Zürich",
         "stage"       : "mixed",
-        "num_users"   : 3,
+        "num_users"   : 4,
         "country_code": "CH"
     },
     {
@@ -30,7 +30,7 @@
     {
         "common_name" : "Chemnitz",
         "nuts_lvl3"   : "Chemnitz, Kreisfreie Stadt",
-        "stage"       : "planned",
+        "stage"       : "production",
         "num_users"   : 1,
         "country_code": "DE"
     },
