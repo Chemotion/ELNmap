@@ -93,7 +93,7 @@
     {
         "common_name" : "Kiel",
         "nuts_lvl3"   : "Kiel, Kreisfreie Stadt",
-        "stage"       : "planned",
+        "stage"       : "testing",
         "num_users"   : 1,
         "country_code": "DE"
     },
