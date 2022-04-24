@@ -1,7 +1,10 @@
 # ELNmap
 
-python script to generate a map of the installed instances of the Chemotion ELN.
+A repository to generate map of installed instances of the [Chemotion](https://chemotion.net/) ELN.
 
-The script requires matplotlib and geopandas for Python.
+The static map is generated using a Python script and the [OpenSans](https://fonts.google.com/specimen/Open+Sans) font.
+The dynamic map is generated using [Folium](https://python-visualization.github.io/folium).
 
-The script also requires geographical data from https://ec.europa.eu/eurostat/de/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts and OpenSans (https://fonts.google.com/specimen/Open+Sans) as a font.
+The latest version of both these maps can be downloaded [here](https://github.com/harivyasi/ELNmap/releases/tag/latest).
+
+Geographical data is retrieved from [EuroStat](https://ec.europa.eu/eurostat/de/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts). There are minor decrepencies in the exact location of places marked on the map because these are generated algorithmically.
