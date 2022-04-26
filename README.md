@@ -3,7 +3,7 @@
 A repository to generate map of installed instances of the [Chemotion](https://chemotion.net/) ELN.
 
 The static map is generated using a Python script and the [OpenSans](https://fonts.google.com/specimen/Open+Sans) font.
-The dynamic map is generated using [Folium](https://python-visualization.github.io/folium).
+The dynamic map is generated using [Leaflet](https://leafletjs.com).
 
 The latest version of both these maps can be downloaded [here](https://github.com/harivyasi/ELNmap/releases/tag/latest).
 

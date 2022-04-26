@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <!-- set Leaflet defaults -->
+    <script>
+        L_NO_TOUCH = false;
+        L_DISABLE_3D = false;
+    </script>
+    <!-- full page rendering -->
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- import Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+    <!-- Leaflet styling i.e. full page -->
+    <style>
+        #map {
+            position: relative;
+            width: 100.0%;
+            height: 100.0%;
+            left: 0.0%;
+            top: 0.0%;
+        }
+        .info { padding: 6px 8px; font: 22px/24px Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; }
+        .legend { text-align: left; line-height: 30px; color: #555; }</style>
+    </style>
+</head>
+
+<body>
+    <!-- insert map into the page -->
+    <div id="map"></div>
+</body>
+
+<script>
+    var map = L.map(
+        "map",
+        {
+            crs: L.CRS.EPSG3857,
+            zoom: $STARTZOOM$,
+            zoomControl: true,
+            preferCanvas: false,
+        }
+    );
+    map.fitBounds([[$LATMIN$,$LONMIN$],[$LATMAX$,$LONMAX$]])
+
+    var tiles = L.tileLayer(
+        "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+        {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e",
+        "detectRetina": false, "maxZoom": $MAXZOOM$, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+    ).addTo(map);    
+// $MARKERS-GO-HERE$
+// $POLYLINES-GO-HERE$
+// $LAYERCONTROL-GO-HERE$
+    var legend = L.control({position: 'bottomleft'});
+    legend.onAdd = function (map) {
+        var div = L.DomUtil.create('div', 'info legend')
+        div.innerHTML = `$LEGEND_HTML$`;
+        return div;
+    };
+    legend.addTo(map);
+    
+    var controls = L.control.layers(null, overlays, {position:"topleft"}).addTo(map);
+</script>
