@@ -71,7 +71,8 @@ for idx, connection in enumerate(connections):
         latlon = list(llm_city[matched_city]['geometry'].item().coords)[0][::-1] # reversed because lon = x, lat = y
         mpl_polygon[-1].append(coord)
         lfl_polylin[-1].append(latlon)
-    mpl_polygon[-1].append(mpl_polygon[-1][0]) #repeat the first point to create a 'closed loop' # see https://stackoverflow.com/questions/43971259/
+    if mpl_polygon[-1]:
+        mpl_polygon[-1].append(mpl_polygon[-1][0]) #repeat the first point to create a 'closed loop' # see https://stackoverflow.com/questions/43971259/
 
 # Create table of cities to plot
 city_in_stages = {} # cities segregated according to their stage, keys are the possible stages
@@ -118,9 +119,10 @@ tab10 = plt.cm.get_cmap('tab20', 10)
 # plot the connections
 connection_colors = []
 for idx, polygon in enumerate(mpl_polygon):
-    xs, ys = zip(*polygon)
-    connection_colors.append(tab10(idx))
-    conn, = plt.plot(xs, ys, color=connection_colors[-1], ls=":", lw=2)
+    if polygon:
+        xs, ys = zip(*polygon)
+        connection_colors.append(tab10(idx))
+        conn, = plt.plot(xs, ys, color=connection_colors[-1], ls=":", lw=2)
 
 # plot the cities
 for city in cities:
@@ -200,19 +202,19 @@ for stage in ordered_stages:
 
 html_text = html_text.replace("// $MARKERS-GO-HERE$", marker_text)
 
-# draw all polylines, club them together into 'connections' so as to be used by the control later
+# if connections exist, draw all polylines, club them together into 'connections' so as to be used by the control later
 
 polyline_text = ""
-for idx, polyline in enumerate(lfl_polylin):
-    latlon_str = ""
-    for latlon in polyline:
-        latlon_str += "[{}, {}],".format(latlon[0],latlon[1])
-    latlon_str = latlon_str.rstrip(',')
-    polyline_text += """\n    var polyline{} = L.polyline(
+if connection_colors: # shorthand to check if connections exists
+    for idx, polyline in enumerate(lfl_polylin):
+        latlon_str = ""
+        for latlon in polyline:
+            latlon_str += "[{}, {}],".format(latlon[0],latlon[1])
+        latlon_str = latlon_str.rstrip(',')
+        polyline_text += """\n    var polyline{} = L.polyline(
         [{}],
         {{"color": "{}", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}}
         )""".format(idx, latlon_str, rgb2hex(connection_colors[idx]))
-if polyline_text:
     polyline_text += "\n    var connections = L.layerGroup([" + ",".join(["polyline{}".format(idx) for idx in range(len(lfl_polylin))]) + "]).addTo(map)"
 
 html_text = html_text.replace("// $POLYLINES-GO-HERE$", polyline_text)
