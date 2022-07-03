@@ -112,6 +112,13 @@
         "country_code": "DE"
     },
     {
+        "common_name" : "Munich",
+        "nuts_lvl3"   : "München, Kreisfreie Stadt",
+        "stage"       : "mixed",
+        "num_users"   : 1,
+        "country_code": "DE"
+    },
+    {
         "common_name" : "Paderborn",
         "nuts_lvl3"   : "Paderborn",
         "stage"       : "production",
@@ -129,6 +136,13 @@
         "common_name" : "Ulm",
         "nuts_lvl3"   : "Ulm, Stadtkreis",
         "stage"       : "planned",
+        "num_users"   : 1,
+        "country_code": "DE"
+    },
+    {
+        "common_name" : "Würzburg",
+        "nuts_lvl3"   : "Würzburg, Kreisfreie Stadt",
+        "stage"       : "production",
         "num_users"   : 1,
         "country_code": "DE"
     }
