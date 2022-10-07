@@ -7,7 +7,7 @@ import geopandas as gpd
 from pathlib import Path
 
 # change this as required
-connections = [("Karlsruhe","Aachen")] # to be stored as common_name
+connections = [] # [("Karlsruhe","Aachen")] # to be stored as common_name
 
 # no need to change unless changes in apprearance are required. Please know what you are doing.
 color       = {"production" : "green", # color codes for different types of instances
