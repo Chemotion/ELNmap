@@ -1,11 +1,13 @@
 # ELNmap
 
 ## Introduction
+
 A repository to generate static and dynamic maps of installed instances of the [Chemotion](https://chemotion.net/) ELN. The latest version of both these maps can be downloaded [here](https://github.com/harivyasi/ELNmap/releases/tag/latest).
 
 There are minor decrepencies in the exact location of places marked on the map because these are generated algorithmically.
 
 ## How to use
+
 See [Developer Notes](developer_notes.md).
 
 ## Copyrights and Licenses
@@ -14,7 +16,7 @@ See [Developer Notes](developer_notes.md).
 
 - Administrative boundaries: © EuroGeographics.
 - Files for the geographical data are retrieved from [EuroStat](https://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts).
-- Font uses SIL Open Font License (OFL), and is downloaded from servers of GitHub.
+- Font uses the SIL Open Font License (OFL), and is downloaded from servers of GitHub.
 
 ### For the dynamic map:
 
@@ -23,9 +25,3 @@ See [Developer Notes](developer_notes.md).
 ### Code in this repository:
 
 - See the [LICENSE](LICENSE) file.
-
-
-
-
-
-
