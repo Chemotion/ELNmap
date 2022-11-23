@@ -1,5 +1,7 @@
 # font files
 data/*.ttf
+# NUTS files
+data/NUTS*.json
 # python env files
 .mapenv
 # output files
