@@ -1,0 +1,29 @@
+name: Create ELN Map
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  create-map:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+      - name: Install dependencies, get prerequisites and run script
+        run: |
+          pip    install -r requirements.txt
+          bash   download_prerequistes.sh
+          python generate_map.py
+      - name: Release Map
+        uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: false
+          files: |
+            map.svg
+            map.html

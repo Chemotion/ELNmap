@@ -1,10 +1,31 @@
 # ELNmap
 
-A repository to generate map of installed instances of the [Chemotion](https://chemotion.net/) ELN.
+## Introduction
+A repository to generate static and dynamic maps of installed instances of the [Chemotion](https://chemotion.net/) ELN. The latest version of both these maps can be downloaded [here](https://github.com/harivyasi/ELNmap/releases/tag/latest).
 
-The static map is generated using a Python script and the [OpenSans](https://fonts.google.com/specimen/Open+Sans) font.
-The dynamic map is generated using [Leaflet](https://leafletjs.com).
+There are minor decrepencies in the exact location of places marked on the map because these are generated algorithmically.
 
-The latest version of both these maps can be downloaded [here](https://github.com/harivyasi/ELNmap/releases/tag/latest).
+## How to use
+See [Developer Notes](developer_notes.md).
 
-Geographical data is retrieved from [EuroStat](https://ec.europa.eu/eurostat/de/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts). There are minor decrepencies in the exact location of places marked on the map because these are generated algorithmically.
+## Copyrights and Licenses
+
+### For the statically generated map:
+
+- Administrative boundaries: © EuroGeographics.
+- Files for the geographical data are retrieved from [EuroStat](https://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts).
+- Font uses SIL Open Font License (OFL), and is downloaded from servers of GitHub.
+
+### For the dynamic map:
+
+- As seen on the generated `map.html` page.
+
+### Code in this repository:
+
+- See the [LICENSE](LICENSE) file.
+
+
+
+
+
+

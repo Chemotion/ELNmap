@@ -1,3 +1,6 @@
-OpenSans-Bold.ttf
-map.svg
-map.html
+# font files
+data/*.ttf
+# python env files
+.mapenv
+# output files
+map.*
