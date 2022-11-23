@@ -7,7 +7,10 @@
 - The workflow is supported by data in the `data` folder.
 - The workflow is automated for GitHub actions using `.github/workflows/map_workflow.yml`
 
-## How how to use it?
+
+## How it works?
+- The static map is generated using [`matplotlib`](https://matplotlib.org/) and its ability to draw maps from topological files. These topological files are downloaded from [Eurostat](https://ec.europa.eu/eurostat/web/gisco/). The generated file is saved as `map.svg`.
+- The dynamic version relies on the [Leaflet](https://leafletjs.com) library. We use [template.html](data/template.html) and then use Python to include markers, layers, and layer control panel on the map as well as replace variables written as `$...VARNAME...$`. This file is saved as `map.html`.
 - Prerequistes:
     - Python 3.8
     - packages listed in [requirements.txt](requirements.txt)
@@ -57,15 +60,10 @@ Connections are defined as a list of tuples called `connections`. You can add as
 ### Changing appearnce
 
 - Colors of the pins can be changed. However they must be one of the colors accepted by `matplotlib`. Further, for the dynamic map we use [images for the pins, loaded on-the-fly by the user](https://github.com/pointhi/leaflet-color-markers/), they must be one the colors listed [here](https://github.com/pointhi/leaflet-color-markers/tree/master/img).
-
 - We then overlay an icon on the pins. This icon can be changed by changing `overlay_icon`.
-
 - The order of stages, as listed in the legend, can be changed by changing the order in the list `ordered_stages`.
-
 - The title of the legend, in the dynamic version, can be changed by changing `legend_header`.
-
 - The location of the legend, in the static version, can be changed by changing `legend_location`. Use [one supported]("https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.legend.html#:~:text=Other%20Parameters%3A-,loc,-str%20or%20pair") by `matplotlib`.
-
 - Zooming and padding (set to sensible defaults) can be changed using these variables:
     - `static_map_patch_size`
     - `dynamic_map_start_zoom`
@@ -75,12 +73,6 @@ Connections are defined as a list of tuples called `connections`. You can add as
 ### Things to remember
 
 - On the static map, a (European) country appears as soon as it is included. For France, the map does not show areas outside mainland (i.e. island regions) for conciseness. The code for this can be changed under the comment `# modifications to map, if any`.  Similar modifications can be made to other regions on the map using similar code. This might be useful when plotting other countries with far-away islands e.g. Spain & Portugal. A helpful guide to NUTS codes is available [here](https://en.wikipedia.org/wiki/First-level_NUTS_of_the_European_Union).
-
 - The exact location of a pin is determined to be as the centroid of the polygon that determines its borders (as defined by NUTS level 3). In rare cases this might [actually be outside the polygon](https://support.esri.com/en/technical-article/000017716). The code will have to be adapted for the same. PR is welcome, though most algorithms that fix can be slow.
-
-## How it works?
-
-- The static map is generated using [`matplotlib`](https://matplotlib.org/) and its ability to draw maps from topological files. These topological files are downloaded from [Eurostat](https://ec.europa.eu/eurostat/web/gisco/). The generated file is saved as `map.svg`.
-- The dynamic version relies on the [Leaflet](https://leafletjs.com) library. We use [template.html](data/template.html) and then use Python to include markers, layers, and layer control panel on the map as well as replace variables written as `$...VARNAME...$`. This file is saved as `map.html`.
 
 
