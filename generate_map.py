@@ -1,5 +1,6 @@
 from pathlib import Path
 from matplotlib.colors import rgb2hex
+from matplotlib import colormaps
 import matplotlib.patches as pat
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -47,6 +48,11 @@ if "FR" in countries_included:
     # include only mainland France for conciseness
     map_country.drop(map_country[map_country.FID.isin(
         ["FRY", "FRM"])].index, inplace=True)
+    
+if "ES" in countries_included:
+    # include only mainland Spain for conciseness
+    map_country.drop(map_country[map_country.FID.isin(
+        ["ES7"])].index, inplace=True)
 
 # read city boundaries, specify the format, subset to countries included
 map_city = gpd.read_file(jsons["city"])
@@ -132,7 +138,7 @@ fig, ax = plt.subplots(1, figsize=(9, 15), tight_layout=True)
 map_country.plot(ax=ax, column="CNTR_CODE", cmap='tab20', edgecolor='w')
 
 # color map for connections
-tab10 = plt.cm.get_cmap('tab20', 10)
+tab10 = colormaps["tab10"]
 
 # plot the connections
 connection_colors = []
