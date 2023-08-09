@@ -9,21 +9,22 @@ jobs:
   create-map:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
         with:
-          python-version: '3.8'
+          python-version: "3.x"
+          check-latest: true
+          cache: "pip"
+          cache-dependency-path: "**/requirements.txt"
       - name: Install dependencies, get prerequisites and run script
         run: |
           pip    install -r requirements.txt
           bash   download_prerequistes.sh
           python generate_map.py
       - name: Release Map
-        uses: "marvinpinto/action-automatic-releases@latest"
+        uses: "softprops/action-gh-release@v1"
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest"
-          prerelease: false
+          token: "${{ secrets.GITHUB_TOKEN }}"
           files: |
             map.svg
             map.html
