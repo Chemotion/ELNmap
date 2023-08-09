@@ -2,8 +2,8 @@ name: Create ELN Map
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - "*"
 
 jobs:
   create-map:
@@ -23,6 +23,7 @@ jobs:
           python generate_map.py
       - name: Release Map
         uses: "softprops/action-gh-release@v1"
+        if: startsWith(github.ref, 'refs/tags/')
         with:
           token: "${{ secrets.GITHUB_TOKEN }}"
           files: |
