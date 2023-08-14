@@ -1,149 +1,149 @@
 [
-    {
-        "common_name" : "Lausanne",
-        "nuts_lvl3"   : "Genève",
-        "stage"       : "production",
-        "num_users"   : 1,
-        "country_code": "CH"
-    },
-    {
-        "common_name" : "Zürich",
-        "nuts_lvl3"   : "Zürich",
-        "stage"       : "mixed",
-        "num_users"   : 4,
-        "country_code": "CH"
-    },
-    {
-        "common_name" : "Aachen",
-        "nuts_lvl3"   : "Städteregion Aachen",
-        "stage"       : "production",
-        "num_users"   : 4,
-        "country_code": "DE"
-    },
-    {
-        "common_name" : "Braunschweig",
-        "nuts_lvl3"   : "Braunschweig, Kreisfreie Stadt",
-        "stage"       : "test",
-        "num_users"   : 2,
-        "country_code": "DE"
-    },
-    {
-        "common_name" : "Chemnitz",
-        "nuts_lvl3"   : "Chemnitz, Kreisfreie Stadt",
-        "stage"       : "production",
-        "num_users"   : 1,
-        "country_code": "DE"
-    },
-    {
-        "common_name" : "Dresden",
-        "nuts_lvl3"   : "Dresden, Kreisfreie Stadt",
-        "stage"       : "test",
-        "num_users"   : 1,
-        "country_code": "DE"
-    },
-    {
-        "common_name" : "Duisburg-Essen",
-        "nuts_lvl3"   : "Duisburg, Kreisfreie Stadt",
-        "stage"       : "production",
-        "num_users"   : 1,
-        "country_code": "DE"
-    },
-    {
-        "common_name" : "Freiburg",
-        "nuts_lvl3"   : "Freiburg im Breisgau, Stadtkreis",
-        "stage"       : "test",
-        "num_users"   : 1,
-        "country_code": "DE"
-    },
-    {
-        "common_name" : "Greifswald",
-        "nuts_lvl3"   : "Vorpommern-Greifswald",
-        "stage"       : "production",
-        "num_users"   : 1,
-        "country_code": "DE"
-    },
-    {
-        "common_name" : "Heidelberg",
-        "nuts_lvl3"   : "Heidelberg, Stadtkreis",
-        "stage"       : "production",
-        "num_users"   : 1,
-        "country_code": "DE"
-    },
-    {
-        "common_name" : "Jena",
-        "nuts_lvl3"   : "Jena, Kreisfreie Stadt",
-        "stage"       : "production",
-        "num_users"   : 1,
-        "country_code": "DE"
-    },
-    {
-        "common_name" : "Kaiserslautern",
-        "nuts_lvl3"   : "Kaiserslautern, Kreisfreie Stadt",
-        "stage"       : "production",
-        "num_users"   : 1,
-        "country_code": "DE"
-    },
-    {
-        "common_name" : "Karlsruhe",
-        "nuts_lvl3"   : "Karlsruhe, Stadtkreis",
-        "stage"       : "mixed",
-        "num_users"   : 5,
-        "country_code": "DE"
-    },
-    {
-        "common_name" : "Kiel",
-        "nuts_lvl3"   : "Kiel, Kreisfreie Stadt",
-        "stage"       : "test",
-        "num_users"   : 1,
-        "country_code": "DE"
-    },
-    {
-        "common_name" : "Köln",
-        "nuts_lvl3"   : "Köln, Kreisfreie Stadt",
-        "stage"       : "test",
-        "num_users"   : 1,
-        "country_code": "DE"
-    },
-    {
-        "common_name" : "Mainz",
-        "nuts_lvl3"   : "Mainz, Kreisfreie Stadt",
-        "stage"       : "test",
-        "num_users"   : 1,
-        "country_code": "DE"
-    },
-    {
-        "common_name" : "Munich",
-        "nuts_lvl3"   : "München, Kreisfreie Stadt",
-        "stage"       : "mixed",
-        "num_users"   : 1,
-        "country_code": "DE"
-    },
-    {
-        "common_name" : "Paderborn",
-        "nuts_lvl3"   : "Paderborn",
-        "stage"       : "production",
-        "num_users"   : 1,
-        "country_code": "DE"
-    },
-    {
-        "common_name" : "Stuttgart",
-        "nuts_lvl3"   : "Stuttgart, Stadtkreis",
-        "stage"       : "production",
-        "num_users"   : 2,
-        "country_code": "DE"
-    },
-    {
-        "common_name" : "Ulm",
-        "nuts_lvl3"   : "Ulm, Stadtkreis",
-        "stage"       : "planned",
-        "num_users"   : 1,
-        "country_code": "DE"
-    },
-    {
-        "common_name" : "Würzburg",
-        "nuts_lvl3"   : "Würzburg, Kreisfreie Stadt",
-        "stage"       : "production",
-        "num_users"   : 1,
-        "country_code": "DE"
-    }
+  {
+    "common_name": "Lausanne",
+    "nuts_lvl3": "Genève",
+    "stage": "production",
+    "num_users": 1,
+    "country_code": "CH"
+  },
+  {
+    "common_name": "Zürich",
+    "nuts_lvl3": "Zürich",
+    "stage": "mixed",
+    "num_users": 4,
+    "country_code": "CH"
+  },
+  {
+    "common_name": "Aachen",
+    "nuts_lvl3": "Städteregion Aachen",
+    "stage": "production",
+    "num_users": 4,
+    "country_code": "DE"
+  },
+  {
+    "common_name": "Braunschweig",
+    "nuts_lvl3": "Braunschweig, Kreisfreie Stadt",
+    "stage": "test",
+    "num_users": 2,
+    "country_code": "DE"
+  },
+  {
+    "common_name": "Chemnitz",
+    "nuts_lvl3": "Chemnitz, Kreisfreie Stadt",
+    "stage": "production",
+    "num_users": 1,
+    "country_code": "DE"
+  },
+  {
+    "common_name": "Dresden",
+    "nuts_lvl3": "Dresden, Kreisfreie Stadt",
+    "stage": "test",
+    "num_users": 1,
+    "country_code": "DE"
+  },
+  {
+    "common_name": "Duisburg-Essen",
+    "nuts_lvl3": "Duisburg, Kreisfreie Stadt",
+    "stage": "production",
+    "num_users": 1,
+    "country_code": "DE"
+  },
+  {
+    "common_name": "Freiburg",
+    "nuts_lvl3": "Freiburg im Breisgau, Stadtkreis",
+    "stage": "test",
+    "num_users": 1,
+    "country_code": "DE"
+  },
+  {
+    "common_name": "Greifswald",
+    "nuts_lvl3": "Vorpommern-Greifswald",
+    "stage": "production",
+    "num_users": 1,
+    "country_code": "DE"
+  },
+  {
+    "common_name": "Heidelberg",
+    "nuts_lvl3": "Heidelberg, Stadtkreis",
+    "stage": "production",
+    "num_users": 1,
+    "country_code": "DE"
+  },
+  {
+    "common_name": "Jena",
+    "nuts_lvl3": "Jena, Kreisfreie Stadt",
+    "stage": "production",
+    "num_users": 1,
+    "country_code": "DE"
+  },
+  {
+    "common_name": "Kaiserslautern",
+    "nuts_lvl3": "Kaiserslautern, Kreisfreie Stadt",
+    "stage": "production",
+    "num_users": 1,
+    "country_code": "DE"
+  },
+  {
+    "common_name": "Karlsruhe",
+    "nuts_lvl3": "Karlsruhe, Stadtkreis",
+    "stage": "mixed",
+    "num_users": 5,
+    "country_code": "DE"
+  },
+  {
+    "common_name": "Kiel",
+    "nuts_lvl3": "Kiel, Kreisfreie Stadt",
+    "stage": "test",
+    "num_users": 1,
+    "country_code": "DE"
+  },
+  {
+    "common_name": "Köln",
+    "nuts_lvl3": "Köln, Kreisfreie Stadt",
+    "stage": "test",
+    "num_users": 1,
+    "country_code": "DE"
+  },
+  {
+    "common_name": "Mainz",
+    "nuts_lvl3": "Mainz, Kreisfreie Stadt",
+    "stage": "test",
+    "num_users": 1,
+    "country_code": "DE"
+  },
+  {
+    "common_name": "Munich",
+    "nuts_lvl3": "München, Kreisfreie Stadt",
+    "stage": "mixed",
+    "num_users": 1,
+    "country_code": "DE"
+  },
+  {
+    "common_name": "Paderborn",
+    "nuts_lvl3": "Paderborn",
+    "stage": "production",
+    "num_users": 1,
+    "country_code": "DE"
+  },
+  {
+    "common_name": "Stuttgart",
+    "nuts_lvl3": "Stuttgart, Stadtkreis",
+    "stage": "production",
+    "num_users": 2,
+    "country_code": "DE"
+  },
+  {
+    "common_name": "Ulm",
+    "nuts_lvl3": "Ulm, Stadtkreis",
+    "stage": "planned",
+    "num_users": 1,
+    "country_code": "DE"
+  },
+  {
+    "common_name": "Würzburg",
+    "nuts_lvl3": "Würzburg, Kreisfreie Stadt",
+    "stage": "production",
+    "num_users": 1,
+    "country_code": "DE"
+  }
 ]
