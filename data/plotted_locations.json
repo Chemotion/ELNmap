@@ -1,149 +1,184 @@
 [
   {
     "common_name": "Lausanne",
-    "nuts_lvl3": "Genève",
-    "stage": "production",
+    "id_name": "Genève",
+    "stage": "Production",
     "num_users": 1,
     "country_code": "CH"
   },
   {
     "common_name": "Zürich",
-    "nuts_lvl3": "Zürich",
-    "stage": "mixed",
+    "id_name": "Zürich",
+    "stage": "Mixed",
     "num_users": 4,
     "country_code": "CH"
   },
   {
     "common_name": "Aachen",
-    "nuts_lvl3": "Städteregion Aachen",
-    "stage": "production",
+    "id_name": "Städteregion Aachen",
+    "stage": "Production",
     "num_users": 4,
     "country_code": "DE"
   },
   {
     "common_name": "Braunschweig",
-    "nuts_lvl3": "Braunschweig, Kreisfreie Stadt",
-    "stage": "test",
+    "id_name": "Braunschweig, Kreisfreie Stadt",
+    "stage": "Test",
     "num_users": 2,
     "country_code": "DE"
   },
   {
     "common_name": "Chemnitz",
-    "nuts_lvl3": "Chemnitz, Kreisfreie Stadt",
-    "stage": "production",
+    "id_name": "Chemnitz, Kreisfreie Stadt",
+    "stage": "Production",
     "num_users": 1,
     "country_code": "DE"
   },
   {
     "common_name": "Dresden",
-    "nuts_lvl3": "Dresden, Kreisfreie Stadt",
-    "stage": "test",
+    "id_name": "Dresden, Kreisfreie Stadt",
+    "stage": "Test",
     "num_users": 1,
     "country_code": "DE"
   },
   {
     "common_name": "Duisburg-Essen",
-    "nuts_lvl3": "Duisburg, Kreisfreie Stadt",
-    "stage": "production",
+    "id_name": "Duisburg, Kreisfreie Stadt",
+    "stage": "Production",
     "num_users": 1,
     "country_code": "DE"
   },
   {
     "common_name": "Freiburg",
-    "nuts_lvl3": "Freiburg im Breisgau, Stadtkreis",
-    "stage": "test",
+    "id_name": "Freiburg im Breisgau, Stadtkreis",
+    "stage": "Test",
     "num_users": 1,
     "country_code": "DE"
   },
   {
     "common_name": "Greifswald",
-    "nuts_lvl3": "Vorpommern-Greifswald",
-    "stage": "production",
+    "id_name": "Vorpommern-Greifswald",
+    "stage": "Production",
     "num_users": 1,
     "country_code": "DE"
   },
   {
     "common_name": "Heidelberg",
-    "nuts_lvl3": "Heidelberg, Stadtkreis",
-    "stage": "production",
+    "id_name": "Heidelberg, Stadtkreis",
+    "stage": "Production",
     "num_users": 1,
     "country_code": "DE"
   },
   {
     "common_name": "Jena",
-    "nuts_lvl3": "Jena, Kreisfreie Stadt",
-    "stage": "production",
+    "id_name": "Jena, Kreisfreie Stadt",
+    "stage": "Production",
     "num_users": 1,
     "country_code": "DE"
   },
   {
     "common_name": "Kaiserslautern",
-    "nuts_lvl3": "Kaiserslautern, Kreisfreie Stadt",
-    "stage": "production",
+    "id_name": "Kaiserslautern, Kreisfreie Stadt",
+    "stage": "Production",
     "num_users": 1,
     "country_code": "DE"
   },
   {
     "common_name": "Karlsruhe",
-    "nuts_lvl3": "Karlsruhe, Stadtkreis",
-    "stage": "mixed",
+    "id_name": "Karlsruhe, Stadtkreis",
+    "stage": "Mixed",
     "num_users": 5,
     "country_code": "DE"
   },
   {
     "common_name": "Kiel",
-    "nuts_lvl3": "Kiel, Kreisfreie Stadt",
-    "stage": "test",
+    "id_name": "Kiel, Kreisfreie Stadt",
+    "stage": "Test",
     "num_users": 1,
     "country_code": "DE"
   },
   {
-    "common_name": "Köln",
-    "nuts_lvl3": "Köln, Kreisfreie Stadt",
-    "stage": "test",
+    "common_name": "Colonge",
+    "id_name": "Köln, Kreisfreie Stadt",
+    "stage": "Test",
     "num_users": 1,
     "country_code": "DE"
   },
   {
     "common_name": "Mainz",
-    "nuts_lvl3": "Mainz, Kreisfreie Stadt",
-    "stage": "test",
+    "id_name": "Mainz, Kreisfreie Stadt",
+    "stage": "Test",
     "num_users": 1,
     "country_code": "DE"
   },
   {
     "common_name": "Munich",
-    "nuts_lvl3": "München, Kreisfreie Stadt",
-    "stage": "mixed",
+    "id_name": "München, Kreisfreie Stadt",
+    "stage": "Mixed",
     "num_users": 1,
     "country_code": "DE"
   },
   {
     "common_name": "Paderborn",
-    "nuts_lvl3": "Paderborn",
-    "stage": "production",
+    "id_name": "Paderborn",
+    "stage": "Production",
     "num_users": 1,
     "country_code": "DE"
   },
   {
     "common_name": "Stuttgart",
-    "nuts_lvl3": "Stuttgart, Stadtkreis",
-    "stage": "production",
+    "id_name": "Stuttgart, Stadtkreis",
+    "stage": "Production",
     "num_users": 2,
     "country_code": "DE"
   },
   {
     "common_name": "Ulm",
-    "nuts_lvl3": "Ulm, Stadtkreis",
-    "stage": "planned",
+    "id_name": "Ulm, Stadtkreis",
+    "stage": "Planned",
     "num_users": 1,
     "country_code": "DE"
   },
   {
     "common_name": "Würzburg",
-    "nuts_lvl3": "Würzburg, Kreisfreie Stadt",
-    "stage": "production",
+    "id_name": "Würzburg, Kreisfreie Stadt",
+    "stage": "Production",
     "num_users": 1,
     "country_code": "DE"
+  },
+  {
+    "common_name": "Barcelona",
+    "id_name": "Barcelona",
+    "stage": "Production",
+    "num_users": 1,
+    "country_code": "ES"
+  },
+  {
+    "common_name": "Grenoble",
+    "id_name": "Isère",
+    "stage": "Production",
+    "num_users": 1,
+    "country_code": "FR"
+  },
+  {
+    "common_name": "Nijmegen",
+    "id_name": "Arnhem/Nijmegen",
+    "stage": "Production",
+    "num_users": 1,
+    "country_code": "NL"
+  },
+  {
+    "common_name": "Utrecht",
+    "id_name": "Utrecht",
+    "stage": "Planned",
+    "num_users": 1,
+    "country_code": "NL"
+  },
+  {
+    "common_name": "Chennai",
+    "id_name": "Chennai",
+    "stage": "Planned",
+    "num_users": 1,
+    "country_code": "IN"
   }
 ]

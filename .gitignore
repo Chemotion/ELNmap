@@ -1,8 +1,13 @@
 # font files
 data/*.ttf
-# NUTS files
+# NUTS/geojson files
 data/NUTS*.json
+data/*.geojson
 # python env files
 .mapenv
 # output files
-map.*
+map.html
+europe.*
+germany.*
+# .vscode folder
+.vscode
