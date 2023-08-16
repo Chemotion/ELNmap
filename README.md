@@ -2,7 +2,7 @@
 
 ## Introduction
 
-A repository to generate static and dynamic maps of installed instances of the [Chemotion](https://chemotion.net/) ELN. The latest version of both these maps can be downloaded [here](https://github.com/harivyasi/ELNmap/releases/tag/latest).
+A repository to generate static and dynamic maps of planned and installed instances of the [Chemotion](https://chemotion.net/) ELN. The latest version of both these maps can be downloaded [here](https://github.com/harivyasi/ELNmap/releases/tag/latest).
 
 There are minor decrepencies in the exact location of places marked on the map because these are generated algorithmically.
 
@@ -16,6 +16,7 @@ See [Developer Notes](developer_notes.md).
 
 - Administrative boundaries: © EuroGeographics.
 - Files for the geographical data are retrieved from [EuroStat](https://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts).
+- Geographical coordinates for locations outside Europe are as defined by [Natural Earth](https://www.naturalearthdata.com).
 - Font uses the SIL Open Font License (OFL), and is downloaded from servers of GitHub.
 
 ### For the dynamic map:
