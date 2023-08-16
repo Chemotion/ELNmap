@@ -2,7 +2,7 @@
 
 ## Introduction
 
-A repository to generate static and dynamic maps of planned and installed instances of the [Chemotion](https://chemotion.net/) ELN. The latest version of both these maps can be downloaded [here](https://github.com/harivyasi/ELNmap/releases/tag/latest).
+A repository to generate static and dynamic maps of planned and installed instances of the [Chemotion](https://chemotion.net/) ELN. The latest version of both these maps can be downloaded [here](https://github.com/harivyasi/ELNmap/releases/latest).
 
 There are minor decrepencies in the exact location of places marked on the map because these are generated algorithmically.
 
