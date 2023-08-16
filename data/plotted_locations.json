@@ -9,8 +9,8 @@
   {
     "common_name": "Zürich",
     "id_name": "Zürich",
-    "stage": "Mixed",
-    "num_users": 4,
+    "stage": "Production",
+    "num_users": 1,
     "country_code": "CH"
   },
   {
@@ -21,29 +21,71 @@
     "country_code": "DE"
   },
   {
+    "common_name": "Berlin",
+    "id_name": "Berlin",
+    "stage": "Planned",
+    "num_users": 4,
+    "country_code": "DE"
+  },
+  {
+    "common_name": "Bielefeld",
+    "id_name": "Bielefeld, Kreisfreie Stadt",
+    "stage": "Test",
+    "num_users": 1,
+    "country_code": "DE"
+  },
+  {
+    "common_name": "Bonn",
+    "id_name": "Bonn, Kreisfreie Stadt",
+    "stage": "Mixed",
+    "num_users": 2,
+    "country_code": "DE"
+  },
+  {
     "common_name": "Braunschweig",
     "id_name": "Braunschweig, Kreisfreie Stadt",
-    "stage": "Test",
+    "stage": "Production",
     "num_users": 2,
+    "country_code": "DE"
+  },
+  {
+    "common_name": "Colonge",
+    "id_name": "Köln, Kreisfreie Stadt",
+    "stage": "Production",
+    "num_users": 1,
     "country_code": "DE"
   },
   {
     "common_name": "Chemnitz",
     "id_name": "Chemnitz, Kreisfreie Stadt",
     "stage": "Production",
-    "num_users": 1,
+    "num_users": 2,
     "country_code": "DE"
   },
   {
     "common_name": "Dresden",
     "id_name": "Dresden, Kreisfreie Stadt",
-    "stage": "Test",
+    "stage": "Production",
     "num_users": 1,
     "country_code": "DE"
   },
   {
     "common_name": "Duisburg-Essen",
     "id_name": "Duisburg, Kreisfreie Stadt",
+    "stage": "Test",
+    "num_users": 1,
+    "country_code": "DE"
+  },
+  {
+    "common_name": "Düsseldorf",
+    "id_name": "Düsseldorf, Kreisfreie Stadt",
+    "stage": "Production",
+    "num_users": 1,
+    "country_code": "DE"
+  },
+  {
+    "common_name": "Frankfurt",
+    "id_name": "Frankfurt am Main, Kreisfreie Stadt",
     "stage": "Production",
     "num_users": 1,
     "country_code": "DE"
@@ -51,7 +93,14 @@
   {
     "common_name": "Freiburg",
     "id_name": "Freiburg im Breisgau, Stadtkreis",
-    "stage": "Test",
+    "stage": "Production",
+    "num_users": 1,
+    "country_code": "DE"
+  },
+  {
+    "common_name": "Geesthacht",
+    "id_name": "Herzogtum Lauenburg",
+    "stage": "Planned",
     "num_users": 1,
     "country_code": "DE"
   },
@@ -59,6 +108,20 @@
     "common_name": "Greifswald",
     "id_name": "Vorpommern-Greifswald",
     "stage": "Production",
+    "num_users": 1,
+    "country_code": "DE"
+  },
+  {
+    "common_name": "Halle",
+    "id_name": "Halle (Saale), Kreisfreie Stadt",
+    "stage": "Production",
+    "num_users": 1,
+    "country_code": "DE"
+  },
+  {
+    "common_name": "Hannover",
+    "id_name": "Region Hannover",
+    "stage": "Planned",
     "num_users": 1,
     "country_code": "DE"
   },
@@ -87,27 +150,34 @@
     "common_name": "Karlsruhe",
     "id_name": "Karlsruhe, Stadtkreis",
     "stage": "Mixed",
-    "num_users": 5,
+    "num_users": 6,
     "country_code": "DE"
   },
   {
     "common_name": "Kiel",
     "id_name": "Kiel, Kreisfreie Stadt",
-    "stage": "Test",
+    "stage": "Production",
     "num_users": 1,
     "country_code": "DE"
   },
   {
-    "common_name": "Colonge",
-    "id_name": "Köln, Kreisfreie Stadt",
-    "stage": "Test",
+    "common_name": "Konstanz",
+    "id_name": "Konstanz",
+    "stage": "Production",
+    "num_users": 1,
+    "country_code": "DE"
+  },
+  {
+    "common_name": "Leipzig",
+    "id_name": "Leipzig",
+    "stage": "Production",
     "num_users": 1,
     "country_code": "DE"
   },
   {
     "common_name": "Mainz",
     "id_name": "Mainz, Kreisfreie Stadt",
-    "stage": "Test",
+    "stage": "Production",
     "num_users": 1,
     "country_code": "DE"
   },
@@ -115,7 +185,14 @@
     "common_name": "Munich",
     "id_name": "München, Kreisfreie Stadt",
     "stage": "Mixed",
-    "num_users": 1,
+    "num_users": 3,
+    "country_code": "DE"
+  },
+  {
+    "common_name": "Münster",
+    "id_name": "Münster, Kreisfreie Stadt",
+    "stage": "Production",
+    "num_users": 2,
     "country_code": "DE"
   },
   {
@@ -126,16 +203,23 @@
     "country_code": "DE"
   },
   {
-    "common_name": "Stuttgart",
-    "id_name": "Stuttgart, Stadtkreis",
+    "common_name": "Regensburg",
+    "id_name": "Regensburg, Kreisfreie Stadt",
     "stage": "Production",
     "num_users": 2,
     "country_code": "DE"
   },
   {
-    "common_name": "Ulm",
-    "id_name": "Ulm, Stadtkreis",
-    "stage": "Planned",
+    "common_name": "Rostock",
+    "id_name": "Landkreis Rostock",
+    "stage": "Production",
+    "num_users": 1,
+    "country_code": "DE"
+  },
+  {
+    "common_name": "Stuttgart",
+    "id_name": "Stuttgart, Stadtkreis",
+    "stage": "Production",
     "num_users": 1,
     "country_code": "DE"
   },
@@ -180,5 +264,26 @@
     "stage": "Planned",
     "num_users": 1,
     "country_code": "IN"
+  },
+  {
+    "common_name": "London",
+    "id_name": "Camden and City of London",
+    "stage": "Planned",
+    "num_users": 1,
+    "country_code": "UK"
+  },
+  {
+    "common_name": "Lexington",
+    "id_name": "Lexington",
+    "stage": "Planned",
+    "num_users": 1,
+    "country_code": "US"
+  },
+  {
+    "common_name": "Oakland",
+    "id_name": "Oakland",
+    "stage": "Planned",
+    "num_users": 1,
+    "country_code": "US"
   }
 ]

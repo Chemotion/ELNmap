@@ -9,6 +9,7 @@ import sys
 # no need to change unless changes in apprearance are required. Please know what you are doing.
 # static map only for Germany, not other european countries
 only_germany = len(sys.argv) > 1 and sys.argv[1] == "germany"
+no_germany = len(sys.argv) > 1 and sys.argv[1] == "nogermany"
 color = {"Production": "green",  # color codes for different types of instances
          "Mixed": "blue",  # color supported in dynamic map are listed here https://github.com/pointhi/leaflet-color-markers
          "Test": "orange",
@@ -25,8 +26,12 @@ if only_germany:
     legend_location = (0.2, 0.7)
     color_based_on = "NUTS_NAME"
     map_filename = "germany.svg"
+elif no_germany:
+    legend_location = (0.7, 0.3)
+    color_based_on = "CNTR_CODE"
+    map_filename = "restofeur.svg"
 else:
-    legend_location = (1.0, 0.4)
+    legend_location = (0.7, 0.3)
     color_based_on = "CNTR_CODE"
     map_filename = "europe.svg"
 
@@ -54,6 +59,15 @@ else:
     eur_country = eur_country[eur_country.CNTR_CODE.isin(
         locations["country_code"].unique().tolist())]
     eur_country_list = eur_country.CNTR_CODE.unique().tolist()
+if no_germany:
+    eur_country.drop(
+        eur_country[eur_country.CNTR_CODE.isin(["DE"])].index, inplace=True)
+    try:
+        eur_country_list.remove("DE")
+    except ValueError:
+        pass
+if not len(eur_country_list):
+    print("WARNING: No European to be plotted.")
 
 # modifications to eur map, if any
 # keep only mainland parts for conciseness
@@ -117,20 +131,18 @@ for x, y, num_users in zip(eur_locations.geometry.x, eur_locations.geometry.y, e
 
 plt.axis('off')
 plt.savefig(map_filename)
-if only_germany:
+if only_germany or no_germany:
     exit()  # exit after producing the static map
 
 ########################
 # Plot the dynamic map #
 ########################
 
-# opposite of what can happen so that the values are always overwritten
-map_limits = {"lon": {}, "lat": {}}
-
-map_limits["lat"]["max"] = locations.latitude.max() + dynamic_map_padding
-map_limits["lat"]["min"] = locations.latitude.min() - dynamic_map_padding
-map_limits["lon"]["max"] = locations.longitude.max() + dynamic_map_padding
-map_limits["lon"]["min"] = locations.longitude.min() - dynamic_map_padding
+# limits of the dynamic
+map_limits = {"lon": {"max": locations.longitude.max() + dynamic_map_padding,
+                      "min": locations.longitude.min() - dynamic_map_padding},
+              "lat": {"max": locations.latitude.max() + dynamic_map_padding,
+                      "min": locations.latitude.min() - dynamic_map_padding}}
 
 # load templated text for the dynamic map
 html_text = (data_dir / "template.html").read_text()
