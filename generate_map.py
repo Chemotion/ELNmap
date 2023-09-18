@@ -23,15 +23,15 @@ dynamic_map_padding = 0.3  # works in tandem with the start zoom setting
 overlay_icon = "https://raw.githubusercontent.com/harivyasi/ELNmap/main/data/favicon.ico"
 legend_header = "<a href='https://chemotion.net/'>Chemotion</a>"
 if only_germany:
-    legend_location = (0.2, 0.7)
+    legend_location = (0.7, 0.4)
     color_based_on = "NUTS_NAME"
     map_filename = "germany.svg"
 elif no_germany:
-    legend_location = (0.7, 0.3)
+    legend_location = (0.8, 0.25)
     color_based_on = "CNTR_CODE"
     map_filename = "restofeur.svg"
 else:
-    legend_location = (0.7, 0.3)
+    legend_location = (0.5, 0.7)
     color_based_on = "CNTR_CODE"
     map_filename = "europe.svg"
 
@@ -56,9 +56,15 @@ if only_germany:
     eur_country_list = ["DE"]
     eur_country = eur_country[eur_country.CNTR_CODE.isin(eur_country_list)]
 else:
+    eur_country_list = locations["country_code"].unique().tolist()
+    try:
+        # limit geographical boundary for conciseness
+        eur_country_list.remove("TR")
+    except ValueError:
+        pass
     eur_country = eur_country[eur_country.CNTR_CODE.isin(
-        locations["country_code"].unique().tolist())]
-    eur_country_list = eur_country.CNTR_CODE.unique().tolist()
+        eur_country_list)]
+    eur_country_list = list(eur_country.CNTR_CODE.unique().tolist())
 if no_germany:
     eur_country.drop(
         eur_country[eur_country.CNTR_CODE.isin(["DE"])].index, inplace=True)
@@ -67,11 +73,11 @@ if no_germany:
     except ValueError:
         pass
 if not len(eur_country_list):
-    print("WARNING: No European to be plotted.")
+    print("WARNING: No European country to be plotted.")
 
 # modifications to eur map, if any
 # keep only mainland parts for conciseness
-eur_country_drop_parts = {"FR": ["FRY", "FRM"], "ES": ["ES7"]}
+eur_country_drop_parts = {"FR": ["FRY", "FRM"], "ES": ["ES7"], "IT": ["ITG"]}
 for v in eur_country_drop_parts.values():
     eur_country.drop(eur_country[eur_country.FID.isin(v)].index, inplace=True)
 
