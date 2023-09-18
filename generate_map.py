@@ -190,8 +190,8 @@ locations['inHTML'] = ["location"]*len(locations)
 for idx, location in locations.iterrows():
     marker_text += "\n    var location{} = L.marker([{}, {}], {{icon: icon_{}}} )".format(
         idx, location.longitude, location.latitude, location.stage)
-    plural = "s" if location.num_users > 1 else ""
-    marker_text += "\n    location{}.bindTooltip(`<div>{}: {} installation{} in {} usage.<div>`, {{\"sticky\": true}});".format(
+    plural = "s are" if location.num_users > 1 else " is"
+    marker_text += "\n    location{}.bindTooltip(`<div>{}: {} installation{} in {} stage.<div>`, {{\"sticky\": true}});".format(
         idx, location.common_name, location.num_users, plural, location.stage)
     locations.loc[idx, "inHTML"] += str(idx)
 
