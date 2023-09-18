@@ -13,8 +13,8 @@ no_germany = len(sys.argv) > 1 and sys.argv[1] == "nogermany"
 color = {"Production": "green",  # color codes for different types of instances
          "Mixed": "blue",  # color supported in dynamic map are listed here https://github.com/pointhi/leaflet-color-markers
          "Test": "orange",
-         "Planned": "grey"}
-ordered_stages = ["Planned", "Test", "Production", "Mixed"]
+         "Interested": "grey"}
+ordered_stages = ["Interested", "Test", "Production", "Mixed"]
 static_map_patch_size = 300
 static_number_fontsize = 12
 dynamic_map_start_zoom = 6
@@ -137,6 +137,13 @@ if only_germany or no_germany:
 ########################
 # Plot the dynamic map #
 ########################
+
+keep = []
+used_stage = set(locations.stage)
+for stage in ordered_stages:
+    if stage in used_stage:
+        keep.append(stage)
+ordered_stages = keep
 
 # limits of the dynamic
 map_limits = {"lon": {"max": locations.longitude.max() + dynamic_map_padding,
