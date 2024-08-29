@@ -9,8 +9,8 @@ jobs:
   create-map:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.x"
           check-latest: true
@@ -24,7 +24,7 @@ jobs:
           python generate_map.py germany
           python generate_map.py nogermany
       - name: Release Map
-        uses: "softprops/action-gh-release@v1"
+        uses: "softprops/action-gh-release@v2"
         if: startsWith(github.ref, 'refs/tags/')
         with:
           token: "${{ secrets.GITHUB_TOKEN }}"

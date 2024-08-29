@@ -79,7 +79,8 @@ if not len(eur_country_list):
 # keep only mainland parts for conciseness
 eur_country_drop_parts = {"FR": ["FRY", "FRM"], "ES": ["ES7"], "IT": ["ITG"]}
 for v in eur_country_drop_parts.values():
-    eur_country.drop(eur_country[eur_country.FID.isin(v)].index, inplace=True)
+    eur_country.drop(
+        eur_country[eur_country.NUTS_ID.isin(v)].index, inplace=True)
 
 # read location boundaries, specify the format, reduce location representation to their centroid point
 eur_location = gpd.read_file(geojsons["eur_location"])
