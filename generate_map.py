@@ -27,11 +27,11 @@ if only_germany:
     color_based_on = "NUTS_NAME"
     map_filename = "germany.svg"
 elif no_germany:
-    legend_location = (0.8, 0.25)
+    legend_location = (0.8, 0.4)
     color_based_on = "CNTR_CODE"
     map_filename = "restofeur.svg"
 else:
-    legend_location = (0.5, 0.7)
+    legend_location = (0.8, 0.4)
     color_based_on = "CNTR_CODE"
     map_filename = "europe.svg"
 
@@ -98,7 +98,7 @@ for idx, row in locations.iterrows():
     # try and get location from the european city list
     geometry = eur_location[eur_location.NUTS_NAME == row.id_name].geometry
     if geometry.empty:  # if not then check international cities list
-        geometry = int_location[int_location.name == row.id_name].geometry
+        geometry = int_location[int_location.ls_name == row.id_name].geometry
     if geometry.empty:  # if still not found then raise error
         raise IndexError(
             "Could not place the following location on map: "+row.common_name)
@@ -125,7 +125,8 @@ eur_locations = locations[locations.country_code.isin(
     eur_country.CNTR_CODE)].to_crs("EPSG:3857")
 
 # plot countries map
-fig, ax = plt.subplots(1, figsize=(10, 10), tight_layout=True)
+fig, ax = plt.subplots(1, tight_layout=True,
+                       figsize=((12, 12) if only_germany else (20, 20)))
 ax = eur_country.plot(ax=ax, column=color_based_on,
                       cmap='tab20', edgecolor='w')
 # plot the patches

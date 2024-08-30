@@ -3,7 +3,7 @@
 ## What is it?
 
 - The repository is useful for creating _static_ and _dynamic_ maps with pins. Each pin has a quanitity and tag associated with it. The tag also determines the color of the pin e.g. [here](https://map.chemotion.scc.kit.edu/) the tags are 'Planned usage', 'Test usage' etc and the quantity is visible by hovering over the pins.
-- The repository consists primarly of a single python script called [`generate_map.py`](generate_map.py). When given a single argument `germany`, it produces a static map of Germany with instances marked on it. Otherwise it produces a static map of European countries as well as a dynamic map of the world with instances marked on it.
+- The repository consists primarily of a single python script called [`generate_map.py`](generate_map.py). When given a single argument `germany`, it produces a static map of Germany with instances marked on it. Otherwise it produces a static map of European countries as well as a dynamic map of the world with instances marked on it.
 - The workflow is supported by data in the [`data`](data) folder.
 - The workflow is automated for GitHub actions using [`map_workflow`](.github/workflows/map_workflow.yml) file.
 
@@ -56,7 +56,7 @@ This can be done by adding JSON entries to the [data/plotted_locations.json](dat
   },
 ```
 
-where `common_name` is the name of the city/region (in language of your choice), `id_name` is the standard name of the city/region (in Europe) according to the NUTS standard or, for places outside Europe, the `name` as used by Natural Earth geojson (most likely the common English name), `stage` is the key that corresponds to `stage` variable in the script, `num_users` is the number of users in that location -- which then appears on the map -- and `country_code` is the [two letter country code as defined by ISO](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+where `common_name` is the name of the city/region (in language of your choice), `id_name` is the standard name of the city/region (in Europe) according to the NUTS standard or, for places outside Europe, the `ls_name` as used by Natural Earth geojson (most likely the common English name), `stage` is the key that corresponds to `stage` variable in the script, `num_users` is the number of users in that location -- which then appears on the map -- and `country_code` is the [two letter country code as defined by ISO](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
 
 ### Changing appearence
 
