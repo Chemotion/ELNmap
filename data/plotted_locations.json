@@ -1,5 +1,12 @@
 [
   {
+    "common_name": "Taizhou",
+    "id_name": "Taizhou",
+    "stage": "Interested",
+    "num_users": 1,
+    "country_code": "CN"
+  },
+  {
     "common_name": "Olomouc",
     "id_name": "Olomoucký kraj",
     "stage": "Production",
@@ -7,7 +14,7 @@
     "country_code": "CZ"
   },
   {
-    "common_name": "Tartu ",
+    "common_name": "Tartu",
     "id_name": "Lõuna-Eesti",
     "stage": "Interested",
     "num_users": 1,
@@ -100,8 +107,15 @@
   {
     "common_name": "Constance",
     "id_name": "Konstanz",
-    "stage": "Mixed",
+    "stage": "Production",
     "num_users": 2,
+    "country_code": "DE"
+  },
+  {
+    "common_name": "Delitzsch",
+    "id_name": "Nordsachsen",
+    "stage": "Production",
+    "num_users": 1,
     "country_code": "DE"
   },
   {
@@ -255,14 +269,14 @@
     "common_name": "Rostock",
     "id_name": "Landkreis Rostock",
     "stage": "Production",
-    "num_users": 1,
+    "num_users": 2,
     "country_code": "DE"
   },
   {
     "common_name": "Regionalverband Saarbrücken",
     "id_name": "Regionalverband Saarbrücken",
-    "stage": "Interested",
-    "num_users": 1,
+    "stage": "Mixed",
+    "num_users": 2,
     "country_code": "DE"
   },
   {
@@ -275,6 +289,13 @@
   {
     "common_name": "Stuttgart",
     "id_name": "Stuttgart, Stadtkreis",
+    "stage": "Production",
+    "num_users": 1,
+    "country_code": "DE"
+  },
+  {
+    "common_name": "Wuppertal",
+    "id_name": "Wuppertal, Kreisfreie Stadt",
     "stage": "Production",
     "num_users": 1,
     "country_code": "DE"
@@ -355,6 +376,13 @@
     "stage": "Production",
     "num_users": 1,
     "country_code": "CH"
+  },
+  {
+    "common_name": "Cork",
+    "id_name": "Cork",
+    "stage": "Production",
+    "num_users": 1,
+    "country_code": "IE"
   },
   {
     "common_name": "Hyderabad",
