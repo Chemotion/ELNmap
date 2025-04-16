@@ -1,0 +1,22 @@
+FROM python:3-slim as base
+
+# inherit user information from the environment
+ARG USER_NAME=vscode # Name for the user if not picked during build process
+ARG USER_UID=1000 # User ID for the user if not picked during build process
+
+# Create the user
+RUN useradd --uid $USER_UID --shell /bin/bash --user-group --create-home $USER_NAME  \
+    #
+    # [Optional] Add sudo support. Omit if you don't need to install software after connecting.
+    && apt-get update \
+    && apt-get install -y sudo wget nano git \
+    && apt-get clean \
+    && echo $USER_NAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USER_NAME \
+    && chmod 0440 /etc/sudoers.d/$USER_NAME
+
+# ********************************************************
+# * Anything else you want to do like clean up goes here *
+# ********************************************************
+
+# [Optional] Set the default user. Omit if you want to keep the default as root.
+USER $USER_NAME

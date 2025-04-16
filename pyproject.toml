@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eln_map"
+version = "1.0.0"
+requires-python = ">= 3.12"
+description = "Create static and dynamic maps from a list of locations."
+license = "MIT"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: POSIX :: Linux"
+]
+dependencies = [
+    "geopandas",
+    "matplotlib"
+]
+
+[project.urls]
+repository = "https://github.com/Chemotion/ELNmap"
+
+[tool.setuptools]
+py-modules = []

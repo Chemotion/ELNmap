@@ -4,7 +4,8 @@ data/*.ttf
 data/NUTS*.json
 data/*.geojson
 # python env files
-.mapenv
+.venv/
+*.egg-info/
 # output files
 map.html
 *.svg

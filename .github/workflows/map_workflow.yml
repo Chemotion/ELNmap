@@ -7,18 +7,13 @@ on:
 
 jobs:
   create-map:
-    runs-on: ubuntu-latest
+    runs-on: python:3-slim
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.x"
-          check-latest: true
-          cache: "pip"
-          cache-dependency-path: "**/requirements.txt"
       - name: Install dependencies, get prerequisites and run script
         run: |
-          pip    install -r requirements.txt
+          pip    install --upgrade pip
+          pip    install --no-warn-script-location .
           bash   download_prerequistes.sh
           python generate_map.py
           python generate_map.py germany

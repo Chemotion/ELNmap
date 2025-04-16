@@ -1,0 +1,29 @@
+{
+  "name": "MapUsingPy",
+  "build": {
+    "dockerfile": "Dockerfile.devcontainer",
+    "args": {
+      "USER_ID": "${localEnv:UID}",
+      "USER_NAME": "${localEnv:USER}"
+    }
+  },
+  // Create the environment
+  "postStartCommand": "(pip install --user --upgrade pip && pip install --no-warn-script-location --user .) || bash download_prerequistes.sh",
+  // Configure tool-specific properties.
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.autopep8"
+      ],
+      "settings": {
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.autopep8"
+        },
+        "editor.formatOnSave": true
+      }
+    }
+  }
+}
