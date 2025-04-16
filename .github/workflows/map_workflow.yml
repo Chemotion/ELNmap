@@ -14,6 +14,7 @@ jobs:
         with:
           check-latest: true
           cache: "pip"
+          python-version: "3.13"
       - name: Install dependencies, get prerequisites and run script
         run: |
           pip    install --upgrade pip
