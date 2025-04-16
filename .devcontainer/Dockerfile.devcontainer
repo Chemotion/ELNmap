@@ -1,4 +1,4 @@
-FROM python:3-slim as base
+FROM python:3-slim AS base
 
 # inherit user information from the environment
 ARG USER_NAME=vscode # Name for the user if not picked during build process
