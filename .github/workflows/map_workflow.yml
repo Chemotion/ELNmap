@@ -7,9 +7,13 @@ on:
 
 jobs:
   create-map:
-    runs-on: python:3-slim
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          check-latest: true
+          cache: "pip"
       - name: Install dependencies, get prerequisites and run script
         run: |
           pip    install --upgrade pip
