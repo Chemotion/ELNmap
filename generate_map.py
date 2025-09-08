@@ -10,11 +10,11 @@ import sys
 # static map only for Germany, not other european countries
 only_germany = len(sys.argv) > 1 and sys.argv[1] == "germany"
 no_germany = len(sys.argv) > 1 and sys.argv[1] == "nogermany"
-color = {"Production": "green",  # color codes for different types of instances
-         "Mixed": "blue",  # color supported in dynamic map are listed here https://github.com/pointhi/leaflet-color-markers
-         "Test": "orange",
-         "Interested": "grey"}
-ordered_stages = ["Interested", "Test", "Production", "Mixed"]
+color = {"Production": "blue",  # color codes for different types of instances
+         # color supported in dynamic map are listed here https://github.com/pointhi/leaflet-color-markers
+         "Trial": "green",
+         "Contacted": "grey"}
+ordered_stages = ["Contacted", "Trial", "Production"]
 static_map_patch_size = 300
 static_number_fontsize = 12
 dynamic_map_start_zoom = 6
@@ -130,12 +130,12 @@ fig, ax = plt.subplots(1, tight_layout=True,
 ax = eur_country.plot(ax=ax, column=color_based_on,
                       cmap='tab20', edgecolor='w')
 # plot the patches
-ax = eur_locations.plot(column="stage", cmap='Dark2', ax=ax, markersize=static_map_patch_size, zorder=2, legend=True, legend_kwds={
+ax = eur_locations.plot(column="stage", cmap='magma', ax=ax, markersize=static_map_patch_size, zorder=2, legend=True, legend_kwds={
                         'prop': {'size': 25}, 'frameon': False, 'framealpha': 0.2, 'handletextpad': 0.1, 'markerscale': 2, 'bbox_to_anchor': legend_location})
 # plot the number of users
-for x, y, num_users in zip(eur_locations.geometry.x, eur_locations.geometry.y, eur_locations.num_users):
-    ax.annotate(num_users, xy=(x, y), horizontalalignment='center',
-                verticalalignment='center', color='white', font=font_file, size=static_number_fontsize)
+# for x, y, num_users in zip(eur_locations.geometry.x, eur_locations.geometry.y, eur_locations.num_users):
+#     ax.annotate(num_users, xy=(x, y), horizontalalignment='center',
+#                 verticalalignment='center', color='white', font=font_file, size=static_number_fontsize)
 
 plt.axis('off')
 plt.savefig(map_filename)
@@ -224,7 +224,7 @@ layercontrol_text += "\n    };"
 
 legend_html = "<b>{}</b><br>".format(legend_header)
 for stage in ordered_stages:
-    legend_html += "\n        <img src='https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-{}.png' width=12>  {} usage<br>".format(
+    legend_html += "\n        <img src='https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-{}.png' width=12>  {}<br>".format(
         color[stage], stage)
 
 html_text = html_text.replace("$LEGEND_HTML$", legend_html)
